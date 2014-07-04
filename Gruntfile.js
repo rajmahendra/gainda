@@ -2,6 +2,8 @@ module.exports = function (grunt) {
 
     'use strict';
 
+    var shell = require('shelljs');
+
     // Project configuration
     grunt.initConfig({
         
@@ -79,7 +81,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
 
+    grunt.registerTask('run', "Run NashornFX", function() {
+         shell.exec('jjs -fx demo/Button.js');
+    });
+
     // Default task
-    grunt.registerTask('default', ['clean','jshint', 'concat', 'uglify','jasmine:all']);
+    //grunt.registerTask('default', ['clean','jshint', 'concat', 'uglify','jasmine:all']);
+    grunt.registerTask('default', ['clean', 'concat', 'run']);
 };
 
