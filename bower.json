@@ -1,0 +1,28 @@
+{
+  "name": "gainda",
+  "version": "0.0.1",
+  "authors": [
+    "Rajmahendra <rajmahendra@gmail.com>"
+  ],
+  "homepage":"",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "description": "Gainda is a framework to work with Nashorn + JavaFX.",
+  "main": "src/prabha.core.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "nashorn",
+    "java",
+    "javafx",
+    "script",
+    "ria"
+  ]
+}
