@@ -7,3 +7,11 @@ describe('JavaScript addition operator', function () {
     });
     
 });
+
+describe('Gainda basic tests', function () {
+
+    it('should be defined by default', function () {
+        expect(Gainda).toBeDefined();
+    });
+    
+});
