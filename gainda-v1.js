@@ -27,6 +27,7 @@
 				#uses -- array of module names that are used inside the app
 				#appName--Application name
 				#views--Array of view options object @see application.view() function's options
+				#tiles--Array of tile options object @see application.tile() function's options
 		*/
 		"application":function(options){
 			loadmodules(requiredModules);
@@ -57,7 +58,7 @@
 					var app = this;
 					var tileDef = {
 						application:app,
-						make:options.make
+						content:options.content
 					};
 					app.tiles.put(options.name,tileDef);
 				},
@@ -69,7 +70,7 @@
 					var me = this;
 					var viewDef =  {
 						application:me,
-						make:options.make
+						content:options.content
 					};
 					this.views.put(options.name,viewDef);
 					return viewDef;
@@ -78,9 +79,9 @@
 				render:function(tileName,viewName){
 					var tile = this.tiles.get(tileName);
 					var view = this.views.get(viewName);
-					//tile.make().getRoot().children.removeAll();
-					var scene = tile.make();
-					scene.getRoot().children.add(view.make())
+					//tile.content().getRoot().children.removeAll();
+					var scene = tile.content();
+					scene.getRoot().children.add(view.content());
 					$STAGE.scene = scene;
 				},
 				run:function(){
