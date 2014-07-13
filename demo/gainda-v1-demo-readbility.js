@@ -1,4 +1,5 @@
-load("gainda-v1.js");
+load('./dist/gainda.js');
+//load("gainda-v1.js");
 var options = {
 	appName:'Gainda-v1-demo',
 	uses:['base','graphics','controls','fxml','web','media','swing','swt'],
